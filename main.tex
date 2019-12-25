@@ -175,6 +175,8 @@ in $I$ se e solo se è strettamente monotona.
 In tal caso, la sua inversa è ancora strettamente
 monotona e continua.
 
+\section{Calcolo differenziale}
+
 \subsection{Definizione di derivata}
 Sia $f: (a,b) \to \mathbb{R}$; $f$ si dice
 derivabile in $x_0 \in (a,b)$ se esiste finito
@@ -399,6 +401,8 @@ Oss: se $F$ è primitiva di $f$, anche $G(x) = F(x) + k$ lo è.
 Sia $f$ una funzione definita su un intervallo $[a,b]$. Si definisce integrale indefinito di $f$ su $[a,b]$ l'insieme di tutte le primitive della funzione $f$ in $[a,b]$ e si indica con 
 \[\int_a^b f(x)dx = F(x) + k\]
 
+\section{Calcolo integrale}
+
 \subsection{Integrale definito}
 Sia $f:[a,b] \to R$, $f$ limitata, e sia $P_n$ la generica equipartizione di $[a,b]$ con 
 \[ \sum_{i = 1}^{n}f(\xi_i)(x_i-x_{i-1})\]
@@ -460,4 +464,96 @@ poiché, per ipotesi, $f$ è continua, per il teorema della media integrale si h
 \[ \Rightarrow \lim_{\Delta x \to 0} \frac{\int_{x}^{x+\Delta x} f(t) dt}{\Delta x} = \lim_{\Delta x \to 0} f(c) = f(x) \]
 per continuità di $f$.
 \end{enumerate}
+
+\section{Integrali generalizzati}
+
+\subsection{Integrale generalizzato su un intervallo illimitato}
+Sia $f: [a, +\infty) \to \mathbb{R}$, $f \in \mathscr{R} ([a,k]) \hspace*{0.2cm} \forall k>a$
+Se esiste finito il 
+\[ \lim_{k \to +\infty} \int_a^k f(t) dt = \Lambda \] dico che $f$ è integrabile in senso generalizzato (o improprio) su $[a, +\infty)$ e scrivo 
+\[ \int_a^{+\infty} f(t)dt = \Lambda \]
+
+\subsection{Integrale generalizzato per funzioni illimitate}
+Sia $f: (a, b] \to \mathbb{R}$, $f$ illimitata in $\upsilon (a)$, $f \in \mathscr{R} ([a+\varepsilon, b])$ Se esiste finito il 
+\[ \lim_{\varepsilon \to o^+} \int_{a +\varepsilon}^b f(t) dt = \Lambda\] 
+dico che $f$ è integrabile in senso generalizzato (o improprio) su $(a,b]$ e scrivo
+\[ \int_a^b f(t) dt = \Lambda \]
+
+\subsection{Criteri di integrabilità}
+\textbf{su un intervallo illimitato}
+\subsubsection{Teorema del confronto}
+Siano $f, g \in \mathscr{R}([a,k]) \hspace*{0.2cm} \forall k>a$ e sia $0 \leq f(x) \leq g(x) \hspace*{0.2cm} \forall x \in [a, +\infty )$. Allora
+\[ \exists \int_a^{+\infty} g(x) dx \Rightarrow \int_a^{+\infty} f(x) dx\]
+\subsubsection{I corollario}
+Sia $f(x)$ integrabile in senso generalizzato su $[a, +\infty)$. Se esiste
+\[ \lim_{x\to +\infty} f(x)\]
+allora tale limite è nullo, quindi
+\[\lim_{x\to +\infty} f(x) = 0 \]
+\textbf{Dimostrazione}\\*
+Supponiamo per assurdo che
+\[\lim_{x\to +\infty} f(x) = l > 0 (<0)\]
+\[\exists H : \forall x > H \quad f(x) = \frac{l}{2}\]
+ma $g(x) = \frac{l}{2}$ non è integrabile su $[H, +\infty)$
+
+\subsubsection{II corollario (convergenza assoluta)}
+Se $f \in \mathscr{R}([a,k]), \forall k > a$ ed esiste
+\[ \int_a^{+\infty}|f(x)|dx \]
+allora esiste
+\[ \int_a^{+\infty}f(x)dx \]
+\textbf{Dimostrazione}\\*
+Per definizione di valore assoluto abbiamo che $-|f(x)|\leq f(x) \leq |f(x)|$ con $x\in [a, +\infty)$\\*
+Sommando $|f(x)|$ a tutti i membri
+\[ 0\leq f(x) + |f(x)| \leq 2|f(x)| \]
+poiché, per ipotesi, esiste
+\[ \int_{a}^{+\infty} |f(x)| dx\]
+ allora, per il criterio del confronto, esiste anche 
+\[ \int_{a}^{+\infty} f(x) + |f(x)| dx \]
+Consideriamo ora il seguente integrale
+\[ \int_{a}^{t} f(x) dx \]
+Sommiamo e sottraiamo $|f(x)|$
+\[ \int_{a}^{t} f(x) - |f(x)| + |f(x)| dx = \int_{a}^{t} f(x) + |f(x)| dx - \int_{a}^{t} |f(x)| dx\]
+e consideriamo il limite per $t \to +\infty$
+\[ \lim_{t \to +\infty} \int_{a}^{t} f(x) - |f(x)| + |f(x)| dx = \lim_{t \to +\infty} \int_{a}^{t} f(x) + |f(x)| dx - \lim_{t \to +\infty} \int_{a}^{t} |f(x)| dx\]
+I due limiti al secondo membro esistono finiti, per cui esiste anche il limite al primo membro.
+
+\subsubsection{III corollario}
+Siano  $f,b : [a, +\infty) \to \mathbb{R}, \quad f,g>0, \quad f,g \in \mathscr{R}([a,k]) \quad \forall k>a$\\*
+Se per $\to +\infty \quad f(x) \sim g(x)$, allora\\*
+$f$ è integrabile in senso generalizzato $\Leftrightarrow$ lo è $g$, ossia
+\[ \exists \int_a^{+\infty} f \Leftrightarrow \exists \int_a^{+\infty} g\]
+\textbf{Dimostrazione}\\*
+$f(x)\sim g(x)$, sia quindi
+\[ \varepsilon = \frac{1}{2}\]
+\[ \exists H = H(\varepsilon) : \forall x > H \]
+\[ \frac{1}{2} < \frac{f(x)}{f(g)} < \frac{3}{2} \]
+\[ \frac{1}{2} g(x) < f(x) < \frac{3}{2} g(x)\]
+per il criterio del confronto, se $g(x)$ converge, anche $\frac{1}{2} g(x)$ converge e quindi anche $f(x)$. Se diverge $f(x)$, diverge anche $\frac{3}{2}g(x)$ e quindi anche $g(x)$
+\section{Serie}
+\subsection{Serie convergente, divergente}
+Si dice che $\displaystyle \sum_{n=0}^{+\infty} a_n$ è convergente, divergente, irregolare se la successione $\{ s_n \}$ delle somme parziali (o ridotte), definita da $s_n = \sum_{k=0}^n a_k$, $\forall k = 1, 2 \dots$, è convergente, divergente o irregolare. In particolare, se $\displaystyle \exists \lim_{n \to +\infty} \sum_{k=0}^n a_k = \lim_{n \to +\infty} s_n = s \in \mathbb{R}$, dico che la serie converge e che la somma è $s$.
+
+\subsection{Serie geometrica}
+Sia $a_n = q^n$, $q \in \mathbb{R}$. Se $q \neq 1$, si ha che
+\[ s_n =  \sum_{k=0}^n a^k = 1 + q + q^2 + \dots + q^n = \frac{1-q^{n+1}}{1-q}\]
+Se $q=1$, $s_n = n+1$\\*
+Prendendo il limite per $n \to +\infty$, si ha che:
+\[
+\lim_{n \to +\infty} s_n = 
+\begin{cases}
+\frac{1}{1-q} \quad |q| < 1 \quad \text{la serie converge}\\
++\infty \quad q \geq 1 \quad \text{la serie diverge}\\
+\nexists \quad q \leq -1 \quad \text{la serie è irregolare}
+\end{cases}
+\]
+\textbf{Dimostrazione}\\*
+Per induzione su $n$. Caso base $n_0 = 1$
+\[\sum_{k=0}^1 q^k = 1+q\]
+\[1+q = \frac{1-q^2}{1-q}\]
+Supponiamo che sia vera per $n$
+\[ \sum_{k=0}^n q^k = \frac{1-q^n+1}{1-q}\]
+e dimostriamo che sia ver per $n+1$, ossia che
+\[ \sum_{k=0}^{n+1} q^k = \frac{1-q^{n+2}}{1-q} \]
+\[  \sum_{k=0}^{n+1} q^k =  \sum_{k=0}^{n} q^k + q^{n+1}\]
+per l'ipotesi induttiva
+\[ = \frac{1-q^{n+1}}{1-q}+q^{n+1} = \frac{1-q^{n+1}+q^{n+1}-q^{n+2}}{1-q} = \frac{1-q^{n+2}}{1-q}\]
 \end{document}
