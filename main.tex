@@ -32,8 +32,8 @@ parte 2\\}
 
 \subsection{Continuità in un punto, in un insieme}
 
-Sia $f: I \rightarrow \mathbb{R}$ ($I$ intervallo ) e
-$x_0 \in I$ un punto di accumulazione per I
+Sia \(f: I \rightarrow \mathbb{R}\), \(I\) intervallo, e
+\(x_0 \in I\) un punto di accumulazione per I
 si dice che $f$ è continua in $c$ se esiste
 \[  \lim_{x \to x_0} f(x) = f(x_0)\]
 Si dice che $f$ è continua in $I$ se è continua in ciascun punto di $I$.
@@ -94,8 +94,8 @@ ed $M = f(x_M)$ è il massimo di $f$.
 
 \subsection{Teorema degli zeri}
 
-Sia $f \in \mathscr{C}([a,b])$ tale che $f(a)\cdot f(b)<0$. Allora $\exists c \in (a,b)$ tale che $f(c) = 0$\\*
-\textbf{Dimostrazione}\\
+Sia $f \in \mathscr{C}([a,b])$ tale che $f(a)\cdot f(b)<0$. Allora $\exists c \in (a,b)$ tale che $f(c) = 0$ \newline
+\textbf{Dimostrazione} \newline
 Supponiamo che $f(a) > 0$. Prendiamo $c_1 = \frac{a+b}{2}$, punto medio di $[a,b]$. Se $f(c_1)=0$, il teorema è dimostrato. Se $f(c_1) \neq 0$, consideriamo l'intervallo $[a_1, b_1]$ e procediamo nel modo seguente:
 \begin{itemize}
   \item se $f(c_1) < 0$, allora $a_1 = a, b_1 = c_1$
@@ -111,17 +111,21 @@ Analogamente, poniamo $c_2 = \frac{b_1 + a_1}{2}$, punto medio di $[a_1,b_1]$. S
   \item se $f(c_2) < 0$, allora $a_2 = a_1, b_2 = c_2$
   \item se $(c_2) > 0$, allora $a_2 = c_2, b_2 = b_1$
 \end{itemize}
-E avremo che 
+E avremo che
 \[ f \in \mathscr{C}([a_2,b_2]) \]
 \[b_2 - a_2 = \frac{b-a}{2^2}\]
 \[a_1<a_2\] 
-\[b_1>b_2\] \newpage
-Continuando in questo modo troviamo infiniti intervalli $[a_n, b_n]$ con le seguenti proprietà:
-\[ a_n \leq a_{n+1} \quad \text{e} \quad b_n \geq b_{n+1} \]
+\[b_1>b_2\]
+Continuando in questo modo troviamo infiniti intervalli $[a_n, b_n]$
+con le seguenti proprietà
+\[
+a_n \leq a_{n+1} \quad \text{e} \quad b_n \geq b_{n+1}
+\]
 \[ f \in C([a_n,b_n]) \]
 \[ b_n - a_n = \frac{b-a}{2^n} \] 
-\[ f(a_n)>0 \quad \text{e} \quad f(b_n) < 0 \] 
-Essendo ${a_n}\uparrow$ e ${b_n}\downarrow$, esistono finiti i limiti:\\
+\[ f(a_n)>0 \quad \text{e} \quad f(b_n) < 0 \]
+\newpage
+Essendo ${a_n}\uparrow$ e ${b_n}\downarrow$, esistono finiti i limiti:
 \[ \lim_{n \to +\infty} a_n = c \in [a,b] \]
 \[ \lim_{n \to +\infty} b_n = \lim_{n \to +\infty} a_n + \frac{b-a}{2^n} = c \]
 Inoltre, poiché $f \in C([a,b])$
@@ -131,9 +135,9 @@ quindi $f(c) = 0$
 
 \subsection{Teorema dei valori intermedi}
 Sia $f \in \mathscr{C}(I)$, $I$ intervallo, e sia $\lambda \in (Inf f, Sup f)$.
-Allora $\exists x \in I\ |\ f(x) = \lambda$. \\ \\
-\textbf{Dimostrazione}\\
-Siano $x_1 < x_2$,\ $\lambda \in (Inf f, Sup f)$\\
+Allora $\exists x \in I\ |\ f(x) = \lambda$.\newline
+\textbf{Dimostrazione} \newline
+Siano $x_1 < x_2$,\ $\lambda \in (Inf f, Sup f)$
 \[ \lambda > Inf f \Rightarrow \exists x_1 \in I\ f(x_1) < \lambda \]
 \[ \lambda < Sup f \Rightarrow \exists x_2 \in I\ f(x_2) > \lambda \]
 Considero $[x_1,x_2]$ e una funzione $g \in C([x_1,x_2]), g(x) = f(x) - \lambda$\\
@@ -163,7 +167,7 @@ Sia $f: Dom(f) \subseteq \mathbb{R} \to \mathbb{R}$ e\\
 supponiamo che il suo dominio sia illimitato.
 Si dice che $f$ ha un asintoto obliquo
 di equazione
-\[ y = mx+q \quad (m, q \in \mathbb{R}, \hspace*{0.2cm} m \neq 0)\quad \text{per} \quad  x \to \pm \infty \]
+\[ y = mx+q \quad (m, q \in \mathbb{R}, \quad m \neq 0)\quad \text{per} \quad  x \to \pm \infty \]
 se esistono
 \[ \lim_{x \to \infty} \frac{f(x)}{x} = m \neq 0 \]
 \[ \lim_{x \to \infty} [f(x) - mx] = q \]
@@ -243,23 +247,33 @@ Il punto $x_0$ si dice punto stazionario se $f'(x_0) = 0$
 Sia $f: [a,b] \to \mathbb{R}$, derivabile in $x \in (a,b)$.
 Se $x$ è punto di estremo locale allora
 \[f'(x) = 0\]
-\textbf{Dimostrazione}\\
+\textbf{Dimostrazione}\newline
 Sia $x_0 \in (a,b)$ punto di massimo relativo, cioè
-\[ \exists \delta > 0: (x_0 - \delta, x_0 + \delta) \subset (a,b)\]
+\[
+\exists \delta > 0: (x_0 - \delta, x_0 + \delta) \subset (a,b)
+\]
 tale che
-\[f(x) \leq f(x_0)\quad \forall x \in (x_0 - \delta, x_0 + \delta)\] \\ \\
-\[ \begin{aligned}  \quad 0 < h < \delta \text \quad {(positivo)} \quad \frac{f(x_0 +h) - f(x_0)}{h}<0 \\ 
- -\delta <h<0 \text \quad {(negativo)} \quad \frac{f(x_0 +h) - f(x_0)}{h}>0 \end{aligned} \] 
-e quindi\\ \\
-\[ \lim_{h \to 0^+} \frac{f(x_0 +h) - f(x_0)}{h} = f'_{+}(x_0) \leq 0 \]
-\[ \lim_{h \to 0^-} \frac{f(x_0 +h) - f(x_0)}{h} = f'_{-}(x_0) \leq 0 \]
+\[
+f(x) \leq f(x_0)\quad \forall x \in (x_0 - \delta, x_0 + \delta)
+\]
+\[ \begin{aligned} 
+\quad 0 < h < \delta \text \quad {(positivo)} \quad \frac{f(x_0 +h) - f(x_0)}{h}<0 \\ 
+ -\delta <h<0 \text \quad {(negativo)} \quad \frac{f(x_0 +h) - f(x_0)}{h}>0 
+\end{aligned} \] 
+e quindi
+\[ 
+\lim_{h \to 0^+} \frac{f(x_0 +h) - f(x_0)}{h} = f'_{+}(x_0) \leq 0 
+\]
+\[ 
+\lim_{h \to 0^-} \frac{f(x_0 +h) - f(x_0)}{h} = f'_{-}(x_0) \leq 0 
+\]
 Essendo $f$ derivabile in $x_0$, $f'_{+}(x_0) = f'_{-}(x_0) = 0$
 
 \subsection{Teorema di Lagrange}
 Sia $f$ derivabile in $(a,b)$ e continua in $[a,b]$.
 Allora esiste $c \in (a,b)$ tale che
 \[ \frac{f(b)-f(a)}{b-a} = f'(c) \]
-\textbf{Dimostrazione}\\
+\textbf{Dimostrazione}\newline
 Caso 1: Teorema di Rolle
 \[ f(a) = f(b) \Rightarrow \exists c: f'(c) = 0 \]
 \[f \in \mathscr{C}([a,b]) \Rightarrow \exists x_1, x_2 :\] 
@@ -270,7 +284,7 @@ Caso 1: Teorema di Rolle
   \item se $m=M$
   \[ f(x) = m = M \quad \forall x \in [a,b] \Rightarrow f'(x) = 0 \quad \forall x \in (a,b) \]
   \item se $m<M$ 
-  \[f(a) = f(b) \Rightarrow x_1 \in (a,b) \vee x_2 \in (a,b)\]\\
+  \[f(a) = f(b) \Rightarrow x_1 \in (a,b) \vee x_2 \in (a,b)\]
   supponiamo che $x_1 \in (a,b)$ sia punto di max $\Rightarrow f'(x_1)=0$
 \end{itemize}
 Caso 2: \[f(b) \neq f(a)\]Considero la funzione ausiliaria 
@@ -279,7 +293,7 @@ Si ha che
 \[g(a) = g(b) = 0\] 
 \[g \in C([a,b])\] 
 \[g \quad \text{derivabile} \quad \text{in} (a,b)\]
-Allora, per il teo. di Rolle, 
+Allora, per il teorema di Rolle, 
 \[ \exists c: g'(c) = f'(c) - \frac{f(b)-f(a)}{b-a} = 0\]
 \[f'(c) = \frac{f(b) - f(a)}{b-a}\]
 
@@ -292,28 +306,36 @@ allora se
 Analogamente per $f$ decrescente.
 \item \[f'(x) > 0 \quad \forall x \in I
 \Rightarrow f \text{è strettamente crescente su} I\]
-Analogamente per $f$ strett. decresc.
+Analogamente per $f$ strettamente decrescente.
 \end{enumerate}
 \textbf{Dimostrazione}
 \begin{enumerate}
-\item $f'(x)=0$\\*
+\item $f'(x)=0$\newline
 $x_1, x_2 \in I$ e supponiamo che $x_1<x_2$ allora \[\exists c \in (x_1, x_2): \frac{f(x_2)-f(x_1)}{x_2-x_1} = f'(c) = 0
 \Rightarrow \forall x_1, x_2 \in I\ f(x_2) = f(x_1) = k\]
-\item $f'(x) \geq 0$\\*
-$x_1, x_2 \in I$ e supponniamo che $x_1<x_2$\\*
-$f$ è deriv. su $[x_1,x_2]$ allora
+\item $f'(x) \geq 0$\newline
+$x_1, x_2 \in I$ e supponiamo che $x_1<x_2$\newline
+$f$ è derivabile su $[x_1,x_2]$ allora
 \[ \exists c \in (x_1, x_2): 
-\frac{f(x_2)-f(x_1)}{x_2 - x_1} = f'(c) \geq 0 \Rightarrow \forall x_1, x_2 \in I \quad x_1<x_2 \Rightarrow f(x_2) \geq f(x_1) \]
+\frac{f(x_2)-f(x_1)}{x_2 - x_1} = f'(c) \geq 0 
+\]
+\[
+\Rightarrow \forall x_1, x_2 \in I \quad x_1<x_2 \Rightarrow f(x_2) \geq f(x_1) 
+\]
 
-\item $f'(x) > 0$\\*
-$x_1, x_2 \in I$ e supponniamo che $x_1<x_2$\\*
-$f$ è deriv. su $[x_1,x_2]$ allora
+\item $f'(x) > 0$\newline
+$x_1, x_2 \in I$ e supponiamo che $x_1<x_2$\newline
+$f$ è derivabile su $[x_1,x_2]$ allora
 \[ \exists c \in (x_1, x_2): 
-\frac{f(x_2)-f(x_1)}{x_2 - x_1} = f'(c) > 0 \Rightarrow \forall x_1, x_2 \in I \quad x_1<x_2 \Rightarrow f(x_2) > f(x_1) \]
+\frac{f(x_2)-f(x_1)}{x_2 - x_1} = f'(c) > 0
+\]
+\[
+\Rightarrow \forall x_1, x_2 \in I \quad x_1<x_2 \Rightarrow f(x_2) > f(x_1) 
+\]
 \end{enumerate}
 
 \subsection{Corollario 2}
-Se, su $I$, $F$ e $G$ sono due primitive di $f$, allora $G = F+k$, k costante.\\*
+Se, su $I$, $F$ e $G$ sono due primitive di $f$, allora $G = F+k$, k costante.\newline
 \textbf{Dimostrazione}
 \[(G-F)'(x) = G'(x) - F'(x) = f(x) - f(x) = 0 \quad \forall x \in I\]
 \[ (G-F)(x) = k \quad \text{costante}\]
@@ -334,29 +356,29 @@ $T_n$ il suo polinomio di Taylor di grado $n$.
 Allora:
 \[f(x) = T_n(f,x_{0,x}) + \sigma(x-x_0)^n, x \to x_0\]
 \[f(x) = \sum_{k=0}^{n}\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k + \sigma(x-x_0)^n =\]
-\[ = f(x_0) + f'(x_0)(x-x_0)+\dots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n + \sigma(x-x_0)^n \] \\*
+\[ = f(x_0) + f'(x_0)(x-x_0)+\dots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n + \sigma(x-x_0)^n \] \newline
 \textbf{Dimostrazione}
 
 Dimostriamo per induzione su $n$. Caso base $n_0 = 1$: 
 \[ f(x) = f(x_0) + f'(x_0)(x-x_0)+\sigma(x-x_0) \quad x\to x_0\]
 \[ \lim_{x \to x_0} \frac{f(x)-f(x_0) -f'(x_0)(x-x_0)}{(x-x_0)} = \frac{0}{0}\]
-Applicchiamo De L'Hospital: 
+Applichiamo De L'Hospital: 
 \[ \lim_{x \to x_0} f'(x) - f'(x_0) = 0\] 
 quindi vero per $n_0 = 1$. Supponiamo che sia vero per $n$, ossia che 
 $\forall f$ derivabile $n$ volte si ha che 
 \[f(x) = T_n(f, x_{0,x}) + \sigma(x-x_0)^n \quad x \to x_0 \]
 \[ \lim_{x \to x_0} \frac{f(x) - T_{n}(f, x_{0,x})}{(x-x_0)^{n}} = 0\]
-Dimostriamolo per $n+1$, cioè che:\\
+Dimostriamolo per $n+1$, cioè che:
 \[ \lim_{x \to x_0} \frac{f(x) - T_{n+1}(f, x_{0,x})}{(x-x_0)^{n+1}} = 0 \]
-Poiché viene una forma di intederminazione $\frac{0}{0}$,
-applicchiamo De L'Hospital:
+Poiché viene una forma di indeterminazione $\frac{0}{0}$,
+applichiamo De L'Hospital:
 \[ \lim_{x \to x_0} \frac{f'(x) - T'_{n+1}(f,x_{0,x})}{(n+1)(x-x_0)^n} \]
-Osserviamo che:\\
+Osserviamo che:
 \[ T'_{n+1}(f,x_{0,x}) = D(\sum_{k=0}^{n+1}\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k) = \sum_{k=1}^{n+1}\frac{f^{(k)}(x_0)}{k!}k(x-x_0)^{k-1} = \]
 \[ = \sum_{k=1}^{n+1}\frac{f^{(k)}(x_0)}{(k-1)!}(x-x_0)^{k-1} = \sum_{k=0}^{n}\frac{f^{(k+1)}(x_0)}{k!}(x-x_0)^{k} = \]
 \[ \sum_{k=0}^{n}\frac{(f')^k(x_0)}{k!}(x-x_0)^{k} = T_n(f',x_{0,x})\]
 Per cui:
-\[ \lim_{x \to x_0} \frac{f'(x) - T'_{n+1}(f,x_{0,x})}{(n+1)(x-x_0)^n} = \lim_{x \to x_0} \frac{f'(x) - T_n(f',x_{0,x})}{(n+1)(x-x_0)^n} \to 0\] per ip. induttiva. Per il teo. di De L'Hospital, quindi,
+\[ \lim_{x \to x_0} \frac{f'(x) - T'_{n+1}(f,x_{0,x})}{(n+1)(x-x_0)^n} = \lim_{x \to x_0} \frac{f'(x) - T_n(f',x_{0,x})}{(n+1)(x-x_0)^n} \to 0\] per ipotesi induttiva. Per il teorema di De L'Hospital, quindi,
 \[ \lim_{x \to x_0} \frac{f'(x) - T'_{n+1}(f,x_{0,x})}{(n+1)(x-x_0)^n} = 0 \Rightarrow \lim_{x \to x_0} \frac{f(x) - T_{n+1}(f,x_{0,x})}{(n+1)(x-x_0)^n} = 0\]
 Per cui è vero che
 \[ \exists f^{(n)}(x_0) \Rightarrow f(x) = \sum_{k=0}^{n}\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k + \sigma (x-x_0)^n \quad (x\to x_0)\]
@@ -383,7 +405,7 @@ $f$ si dice concava su $I$ se e solo se
 \subsubsection{Definizione grafica di funzione convessa e concava}
 Sia $f: I \to \mathbb{R}$. Se 
 \[Epif = \{(x,y): x \in I \wedge y \geq f(x)\}\]
-,epigrafico di $f$, è convesso, dico che $f$ è una funzione convessa su $I$. Se $-f$ è convessa, dico che $f$ è concava.\\* \\*
+,epigrafico di $f$, è convesso, dico che $f$ è una funzione convessa su $I$. Se $-f$ è convessa, dico che $f$ è concava.\newline
 $Epif$ è convesso se e solo se
 \[ \forall P_1,P_2 \in graff\ [P_1, P_2] \in Epif \]
 
@@ -393,8 +415,8 @@ Sia $f: (a,b) \to \mathbb{R}$ continua e invertibile in $(a,b)$ e $g = f^{-1}$ l
 
 \subsection{Primitiva}
 Data $f: A\subseteq \mathbb{R} \to \mathbb{R}$ se $\exists \hspace*{0.1cm} F: A \to \mathbb{R}$
-tale che $F'(x) = f(x) \hspace*{0.2cm} \forall x \in A$\\*
-Chiamo $F$ "funzione primitiva" di $f$ su $A$.\\*
+tale che $F'(x) = f(x) \hspace*{0.2cm} \forall x \in A$\newline
+Chiamo $F$ "funzione primitiva" di $f$ su $A$.\newline
 Oss: se $F$ è primitiva di $f$, anche $G(x) = F(x) + k$ lo è.
 
 \subsection{Integrale indefinito}
@@ -406,8 +428,8 @@ Sia $f$ una funzione definita su un intervallo $[a,b]$. Si definisce integrale i
 \subsection{Integrale definito}
 Sia $f:[a,b] \to R$, $f$ limitata, e sia $P_n$ la generica equipartizione di $[a,b]$ con 
 \[ \sum_{i = 1}^{n}f(\xi_i)(x_i-x_{i-1})\]
-somma n-sima di Cauchy-Riemann di $f$. Se esiste finito \[ \lim_{n \to +\infty} \sum_{i = 1}^{n}f(\xi_i)(x_i-x_{i-1})\]
-uniforme rispetto alla scelta degli $\xi_i \in I_i$, dico che $f$ è "integrabile secondo Cauchy-Riemann" su $[a,b]$ e chiamo integrale di $f$ su $[a,b]$ tale limite.\\*
+somma n-esima di Cauchy-Riemann di $f$. Se esiste finito \[ \lim_{n \to +\infty} \sum_{i = 1}^{n}f(\xi_i)(x_i-x_{i-1})\]
+uniforme rispetto alla scelta degli $\xi_i \in I_i$, dico che $f$ è "integrabile secondo Cauchy-Riemann" su $[a,b]$ e chiamo integrale di $f$ su $[a,b]$ tale limite.\newline
 Scrivo: 
 \[\displaystyle \int_{a}^{b} f(x)dx = \lim_{n \to +\infty} \sum_{i = 1}^{n}f(\xi_i)(x_i-x_{i-1})\]
 
@@ -433,7 +455,7 @@ Sia $f \in \mathscr{R} ([a,b])$ ed esista primitiva di $f$ su $[a,b]$. Allora
 \[ P_n = \{ x_0 = a \leq x_1 \leq \dots x_n = b \} \] equipartizione di $[a,b]$ Allora:
 \[ F(b) - F(a) = F(x_n) - F(x_{n-1}) + F(x_{n-1}) - F(x_{n-2}) + F(x_{n-2})\]
 \[+ \dots + F(x_2) - F(x_1) + F(x_1) - F(x_0) = \sum_{i = 1}^{n} F(x_i) - F(x_{i-1})\]
-Poiché sono soddisfatte le ipotesi, applicchiamo il teorema di Lagrange agli intervalli $[x_{i-1}, x_i]$. Esiste allora $\xi_i \in (x_{i-1}, x_i)$ tale che
+Poiché sono soddisfatte le ipotesi, applichiamo il teorema di Lagrange agli intervalli $[x_{i-1}, x_i]$. Esiste allora $\xi_i \in (x_{i-1}, x_i)$ tale che
 \[ F(x_i) - F(x_{i-1}) = (x_i - x_{i-1})F'(\xi_i) = (x_i - x_{i-1})f(\xi_i)\]
 Ne segue che
 \[F(b) - F(a) = \sum_{i = 1}^{n} (x_i - x_{i-1})f(\xi_i) \]
@@ -489,7 +511,7 @@ Sia $f(x)$ integrabile in senso generalizzato su $[a, +\infty)$. Se esiste
 \[ \lim_{x\to +\infty} f(x)\]
 allora tale limite è nullo, quindi
 \[\lim_{x\to +\infty} f(x) = 0 \]
-\textbf{Dimostrazione}\\*
+\textbf{Dimostrazione}\newline
 Supponiamo per assurdo che
 \[\lim_{x\to +\infty} f(x) = l > 0 (<0)\]
 \[\exists H : \forall x > H \quad f(x) = \frac{l}{2}\]
@@ -500,8 +522,8 @@ Se $f \in \mathscr{R}([a,k]), \forall k > a$ ed esiste
 \[ \int_a^{+\infty}|f(x)|dx \]
 allora esiste
 \[ \int_a^{+\infty}f(x)dx \]
-\textbf{Dimostrazione}\\*
-Per definizione di valore assoluto abbiamo che $-|f(x)|\leq f(x) \leq |f(x)|$ con $x\in [a, +\infty)$\\*
+\textbf{Dimostrazione}\newline
+Per definizione di valore assoluto abbiamo che $-|f(x)|\leq f(x) \leq |f(x)|$ con $x\in [a, +\infty)$\newline
 Sommando $|f(x)|$ a tutti i membri
 \[ 0\leq f(x) + |f(x)| \leq 2|f(x)| \]
 poiché, per ipotesi, esiste
@@ -517,26 +539,27 @@ e consideriamo il limite per $t \to +\infty$
 I due limiti al secondo membro esistono finiti, per cui esiste anche il limite al primo membro.
 
 \subsubsection{III corollario}
-Siano  $f,b : [a, +\infty) \to \mathbb{R}, \quad f,g>0, \quad f,g \in \mathscr{R}([a,k]) \quad \forall k>a$\\*
-Se per $\to +\infty \quad f(x) \sim g(x)$, allora\\*
+Siano  $f,b : [a, +\infty) \to \mathbb{R}, \quad f,g>0, \quad f,g \in \mathscr{R}([a,k]) \quad \forall k>a$\newline
+Se per $x \to +\infty \quad f(x) \sim g(x)$, allora\newline
 $f$ è integrabile in senso generalizzato $\Leftrightarrow$ lo è $g$, ossia
 \[ \exists \int_a^{+\infty} f \Leftrightarrow \exists \int_a^{+\infty} g\]
-\textbf{Dimostrazione}\\*
+\textbf{Dimostrazione}\newline
 $f(x)\sim g(x)$, sia quindi
 \[ \varepsilon = \frac{1}{2}\]
 \[ \exists H = H(\varepsilon) : \forall x > H \]
 \[ \frac{1}{2} < \frac{f(x)}{f(g)} < \frac{3}{2} \]
 \[ \frac{1}{2} g(x) < f(x) < \frac{3}{2} g(x)\]
 per il criterio del confronto, se $g(x)$ converge, anche $\frac{1}{2} g(x)$ converge e quindi anche $f(x)$. Se diverge $f(x)$, diverge anche $\frac{3}{2}g(x)$ e quindi anche $g(x)$
+
 \section{Serie}
 \subsection{Serie convergente, divergente}
 Si dice che $\displaystyle \sum_{n=0}^{+\infty} a_n$ è convergente, divergente, irregolare se la successione $\{ s_n \}$ delle somme parziali (o ridotte), definita da $s_n = \sum_{k=0}^n a_k$, $\forall k = 1, 2 \dots$, è convergente, divergente o irregolare. In particolare, se $\displaystyle \exists \lim_{n \to +\infty} \sum_{k=0}^n a_k = \lim_{n \to +\infty} s_n = s \in \mathbb{R}$, dico che la serie converge e che la somma è $s$.
 
 \subsection{Serie geometrica}
-Sia $a_n = q^n$, $q \in \mathbb{R}$. Se $q \neq 1$, si ha che
+Sia \(a_n = q^n, q \in \mathbb{R}\). Se \(q \neq 1\), si ha che
 \[ s_n =  \sum_{k=0}^n a^k = 1 + q + q^2 + \dots + q^n = \frac{1-q^{n+1}}{1-q}\]
-Se $q=1$, $s_n = n+1$\\*
-Prendendo il limite per $n \to +\infty$, si ha che:
+Se \(q=1, s_n = n+1\)
+Prendendo il limite per \(n \to +\infty\), si ha che:
 \[
 \lim_{n \to +\infty} s_n = 
 \begin{cases}
@@ -545,15 +568,180 @@ Prendendo il limite per $n \to +\infty$, si ha che:
 \nexists \quad q \leq -1 \quad \text{la serie è irregolare}
 \end{cases}
 \]
-\textbf{Dimostrazione}\\*
-Per induzione su $n$. Caso base $n_0 = 1$
+\textbf{Dimostrazione}\newline
+Per induzione su \(n\). Caso base \(n_0 = 1\)
 \[\sum_{k=0}^1 q^k = 1+q\]
 \[1+q = \frac{1-q^2}{1-q}\]
 Supponiamo che sia vera per $n$
 \[ \sum_{k=0}^n q^k = \frac{1-q^n+1}{1-q}\]
-e dimostriamo che sia ver per $n+1$, ossia che
+e dimostriamo che sia vero per $n+1$, ossia che
 \[ \sum_{k=0}^{n+1} q^k = \frac{1-q^{n+2}}{1-q} \]
 \[  \sum_{k=0}^{n+1} q^k =  \sum_{k=0}^{n} q^k + q^{n+1}\]
 per l'ipotesi induttiva
 \[ = \frac{1-q^{n+1}}{1-q}+q^{n+1} = \frac{1-q^{n+1}+q^{n+1}-q^{n+2}}{1-q} = \frac{1-q^{n+2}}{1-q}\]
+
+\subsection{Serie di Mengoli}
+\[ \sum_{n = 1}^{\infty} \frac{1}{n(n+1)} \quad \text{converge a 1}\]
+\textbf{Dimostrazione}\newline
+Osserviamo che
+\[ \frac{1}{n(n+1)} = \frac{1}{n} - \frac{1}{n+1}\]
+per cui
+\[ \sum_{k = 1}^{\infty} \frac{1}{k(k+1)} = \left(1- \frac{1}{2} \right) + \left(\frac{1}{2} - \frac{1}{3} \right) + \dots + \left( \frac{1}{n-1} - \frac{1}{n} \right) + \left( \frac{1}{n} - \frac{1}{n+1} \right) \]
+\[ = 1 - \frac{1}{n+1} \to 1\]
+
+\subsection{Serie armonica}
+\[ \sum_{n=1}^{+\infty} \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n} + \dots \to +\infty \]
+
+\textbf{Dimostrazione}\newline
+Consideriamo il seguente grafico
+\[ f(x) = \frac{1}{n} \]
+\includegraphics[width=\textwidth]{images/armonica.png}
+Fissato un \(N\), intero, vale sempre 
+\[ \int_1^N \frac{1}{n} dx  < \sum_{n=1}^{N-1} \frac{1}{n}\]
+Poiché
+\[ \int_1^N \frac{1}{n} dx = logN \to +\infty \quad N\to +\infty \]
+anche
+\[  \sum_{n=1}^{N-1} \frac{1}{n} \to +\infty \quad N \to +\infty \]
+
+\subsection{Condizione necessaria per la convergenza}
+Condizione necessaria affinché una serie \(\displaystyle \sum_{n=0}^+\infty\)
+converga è che \( a_n \to 0\). Tuttavia non è sufficiente. Esempio: serie armonica \(\displaystyle \sum_{n=1}^{+\infty} \frac{1}{n}\)
+
+\subsection{Serie a termini non negativi}
+La successione delle somme parziali è crescente
+\[
+s_{n+1} = s_n + a_{n+1} \geq s_n
+\]
+Per il teorema sull'esistenza del limite per successioni monotone, esiste 
+\[
+\lim_{n \to +\infty} s_n
+\]
+tale limite sarà finito oppure $+\infty$. Perciò avremo che
+\[
+\sum_{n=0}^{+\infty} a_n, \quad a_n \geq 0
+\]
+sarà sempre regolare, ossia sarà o convergente o divergente a $+\infty$
+
+\subsection{Criteri di conseguenza}
+\subsubsection{Criterio del confronto}
+Siano \(\{ a_n \}, \{ b_n \}\) due successioni tali che \(0 \leq a_n \leq b_n\). Se \(\displaystyle \sum_{n=0}^{+\infty} b_n\) converge, allora anche \(\displaystyle \sum_{n=0}^{+\infty} a_n\) converge. Se \(\displaystyle \sum_{n=0}^{+\infty} a_n\) diverge, allora diverge anche \(\displaystyle \sum_{n=0}^{+\infty} b_n\)
+\textbf{Dimostrazione}\newline
+Siano \(\displaystyle A_n = \sum_{k=0}^{n} a_k\) e \(\displaystyle B_n = \sum_{k=0}^{n} b_k\) con \( A_n \leq B_n \wedge B_n \to B\)
+poiché \(A_n \uparrow\)
+\[
+\exists \lim_{n \to +\infty} A_n \leq B
+\]
+cioè
+\[
+\lim_{n \to + \infty} A_n = A \in \mathbb{R} \quad (A\leq B)
+\]
+per il teorema del confronto per successioni \(A=B\)
+
+\subsubsection{Corollario (confronto asintotico)}
+Siano \(\{ a_n \}, \{ b_n \}\) successioni positive, tali che \(a_n \sim b_n\)  per \(n \to +\infty\) allora
+\[
+\sum_{n=0}^{+\infty} a_n \quad \text{converge} \quad \Leftrightarrow \sum_{n=0}^{+\infty} b_n \quad \text{converge}
+\]
+Hanno cioè lo stesso carattere.
+\newpage
+\textbf{Dimostrazione}\newline
+Poiché \(a_n \sim b_n\)  per \(n \to +\infty\) si ha che
+\[
+\forall \varepsilon > 0 \quad 1 - \varepsilon < \frac{a_n}{b_n} < 1 + \varepsilon
+\]
+posto \(\varepsilon = \frac{1}{2}\)
+\[
+\frac{1}{2} < \frac{a_n}{b_n} < \frac{3}{2}
+\]
+\[
+\frac{1}{2}b_n < a_n< \frac{3}{2}b_n
+\]
+per il criterio del confronto, la prima disuguaglianza implica che se \(\displaystyle \sum_{n=0}^{+\infty} a_n\) converge, anche \(\displaystyle \sum_{n=0}^{+\infty} b_n\), mentre la seconda che se \(\displaystyle \sum_{n=0}^{+\infty} a_n\) diverge anche \(\displaystyle \sum_{n=0}^{+\infty} b_n\) diverge
+
+\subsubsection{Criterio del rapporto}
+Sia \(\{ a_n \}, a_n \geq 0, a_n \neq 0\) definitivamente. Se esiste
+\[
+\lim_{n \to +\infty} \frac{a_{n+1}}{a_n} = \begin{cases}
+l<1 \quad \sum_{n=0}^{+\infty} a_n \quad \text{converge}\\
+l=1 \quad \text{nulla si può dire}\\
+l>1 \quad \sum_{n=0}^{+\infty} a_n \quad \text{diverge}\\
+\end{cases}
+\]
+
+\subsubsection{Criterio della radice}
+Sia \(\{ a_n \}, a_n \geq 0\). Se esiste
+\[
+\lim_{n \to +\infty} \sqrt[n]{a_n} = \begin{cases}
+l<1 \quad \sum_{n=0}^{+\infty} a_n \quad \text{converge}\\
+l=1 \quad \text{nulla si può dire}\\
+l>1 \quad \sum_{n=0}^{+\infty} a_n \quad \text{diverge}
+\end{cases}
+\]
+\textbf{Dimostrazione}
+\begin{itemize}
+  \item $l<1$
+  \[
+  \lim_{n \to +\infty} \sqrt[n]{a_n} = l < 1
+  \]
+  allora 
+  \[
+  \forall \varepsilon > 0 \quad \sqrt[n]{a_n} \leq l + \frac{\varepsilon}{2}
+  \]
+  ma $l<1$, quindi per un opportuno $\varepsilon > 0$ anche $l< 1 - \varepsilon$. Per cui
+  \[
+  \sqrt[n]{a_n} \leq l + \frac{\varepsilon}{2} < (1-\varepsilon)+\frac{\varepsilon}{2} = 1 - \frac{\varepsilon}{2}
+  \]
+  \[
+  a_n < \left(1 - \frac{\varepsilon}{2} \right)^n
+  \] 
+  per il criterio del confronto con la serie geometrica convergente 
+  \[
+  \sum_{n=1}^{+\infty} \left(1 - \frac{\varepsilon}{2} \right)^n
+  \]
+  la serie di partenza converge.
+  \item $l>1$
+  \[
+  \lim_{n \to +\infty} \sqrt[n]{a_n} = l > 1
+  \]
+  analogamente
+  \[
+  a_n > \left(1 + \frac{\varepsilon}{2} \right)^n \quad \varepsilon>0
+  \]
+  per il criterio del confronto con la serie geometrica divergente
+  \[
+  \sum_{n=1}^{+\infty} \left(1 + \frac{\varepsilon}{2} \right)^n
+  \]
+  la serie di partenza diverge
+\end{itemize}
+
+\subsection{Serie a termini di segno qualunque}
+Una serie \(\displaystyle \sum_{n=0}^{+\infty} a_n\) si dirà assolutamente convergente se converge \(\displaystyle \sum_{n=0}^{+\infty} |a_n|\). \newline
+Se la serie \(\displaystyle \sum_{n=0}^{+\infty} a_n\) converge assolutamente, allora converge. \newline
+\textbf{Dimostrazione}
+\[
+a_n^+ = Max\{ a_n, 0 \}, \quad a_n^- = Max\{ -a_n, 0 \}
+\]
+\[
+a_n = a_n^+ - a_n^-
+\]
+\[
+0\leq a_n^+, \quad a_n^- \leq |a_n|
+\]
+per il teorema del confronto \(\displaystyle \sum_{n=0}^{+\infty} a_n^+ , \sum_{n=0}^{+\infty} a_n^-\) convergono, quindi
+\[
+\sum_{n=0}^{+\infty} a_n = \sum_{n=0}^{+\infty} (a_n^+ -a_n^-) \quad \text{converge}
+\]
+
+\subsection{Serie a termini di segno alterno}
+\[
+\sum_{n=0}^{+\infty}(-1)^n a_n \quad \text{con} \quad a_n \geq 0 \quad \forall n
+\]
+\subsection{Criterio di Leibniz}
+Sia data \(\displaystyle \sum_{n=0}^{+\infty}(-1)^n a_n \) tale che \(a_n \geq 0\). Se
+\begin{enumerate}
+  \item $a_n \downarrow$
+  \item $\displaystyle \lim_{n \to +\infty} a_n = 0$
+\end{enumerate}
+Allora \(\displaystyle \sum_{n=0}^{+\infty}(-1)^n a_n\) converge
+
 \end{document}
