@@ -11,10 +11,18 @@
 \usepackage{amssymb,amsmath, amsfonts}
 \usepackage{booktabs}
 \usepackage{color}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{multirow}
 \usepackage{rotating}
 \usepackage{graphicx}
 \usepackage{wasysym}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true, % make the links colored
+    linkcolor=NavyBlue, % color TOC links in blue
+    urlcolor=red, % color URLs in red
+    linktoc=all % 'all' will create links for everything in the TOC
+}
 \usepackage{mathrsfs} % https://www.ctan.org/pkg/mathrsfs%
 \graphicspath{ {./images/} }
 
@@ -23,10 +31,14 @@ Teoria Analisi\\
 parte 2\\}
 \author{}
 \date{2019-2020}
-
+\renewcommand*\contentsname{Indice}
 \begin{document}
 
 \maketitle
+
+\tableofcontents
+
+\newpage
 
 \section{Continuità}
 
@@ -92,7 +104,7 @@ ed $m = f(x_m)$ è il minimo di $f$;
 analogamente, $x_M$ è punto di massimo per $f$,
 ed $M = f(x_M)$ è il massimo di $f$.
 
-\subsection{Teorema degli zeri}
+\subsection{Teorema degli zeri (*)}
 
 Sia $f \in \mathscr{C}([a,b])$ tale che $f(a)\cdot f(b)<0$. Allora $\exists c \in (a,b)$ tale che $f(c) = 0$ \newline
 \textbf{Dimostrazione} \newline
@@ -133,7 +145,7 @@ Inoltre, poiché $f \in C([a,b])$
 \[ \lim_{n \to +\infty} f(b_n) = f(c) \quad \text{quindi} f(b_n) <0 \Rightarrow f(c) \geq 0 \]
 quindi $f(c) = 0$
 
-\subsection{Teorema dei valori intermedi}
+\subsection{Teorema dei valori intermedi (*)}
 Sia $f \in \mathscr{C}(I)$, $I$ intervallo, e sia $\lambda \in (Inf f, Sup f)$.
 Allora $\exists x \in I\ |\ f(x) = \lambda$.\newline
 \textbf{Dimostrazione} \newline
@@ -243,7 +255,7 @@ Analogamente per un minimo locale.
 Sia $f: I \to \mathbb{R}$, con $I$ intervallo, derivabile in $x_0 \in I$.
 Il punto $x_0$ si dice punto stazionario se $f'(x_0) = 0$
 
-\subsection{Teorema di Fermat}
+\subsection{Teorema di Fermat (*)}
 Sia $f: [a,b] \to \mathbb{R}$, derivabile in $x \in (a,b)$.
 Se $x$ è punto di estremo locale allora
 \[f'(x) = 0\]
@@ -269,7 +281,7 @@ e quindi
 \]
 Essendo $f$ derivabile in $x_0$, $f'_{+}(x_0) = f'_{-}(x_0) = 0$
 
-\subsection{Teorema di Lagrange}
+\subsection{Teorema di Lagrange (*)}
 Sia $f$ derivabile in $(a,b)$ e continua in $[a,b]$.
 Allora esiste $c \in (a,b)$ tale che
 \[ \frac{f(b)-f(a)}{b-a} = f'(c) \]
@@ -297,7 +309,7 @@ Allora, per il teorema di Rolle,
 \[ \exists c: g'(c) = f'(c) - \frac{f(b)-f(a)}{b-a} = 0\]
 \[f'(c) = \frac{f(b) - f(a)}{b-a}\]
 
-\subsection{Corollario 1}
+\subsection{Corollario 1 (*)}
 Sia $f$ derivabile su $I$, intervallo,
 allora se
 \begin{enumerate}
@@ -334,7 +346,7 @@ $f$ è derivabile su $[x_1,x_2]$ allora
 \]
 \end{enumerate}
 
-\subsection{Corollario 2}
+\subsection{Corollario 2 (*)}
 Se, su $I$, $F$ e $G$ sono due primitive di $f$, allora $G = F+k$, k costante.\newline
 \textbf{Dimostrazione}
 \[(G-F)'(x) = G'(x) - F'(x) = f(x) - f(x) = 0 \quad \forall x \in I\]
@@ -350,7 +362,7 @@ di indeterminazione del tipo $\frac{0}{0}$ o $\frac{\infty}{\infty}$
 \exists \lim_{x \to x^{+}_0} \frac{f'(x)}{g'(x)} = l\ \in \mathbb{R}^{*} \Rightarrow \exists \lim_{x \to x^{+}_0} \frac{f(x)}{g(x)} = l
 \]
 
-\subsection{Formula di Taylor con resto secondo Peano}
+\subsection{Formula di Taylor con resto secondo Peano (*)}
 Sia $f$ derivabile $n$ volte in $x_0$ e sia
 $T_n$ il suo polinomio di Taylor di grado $n$.
 Allora:
@@ -433,7 +445,7 @@ uniforme rispetto alla scelta degli $\xi_i \in I_i$, dico che $f$ è "integrabil
 Scrivo: 
 \[\displaystyle \int_{a}^{b} f(x)dx = \lim_{n \to +\infty} \sum_{i = 1}^{n}f(\xi_i)(x_i-x_{i-1})\]
 
-\subsection{Teorema della media integrale}
+\subsection{Teorema della media integrale (*)}
 Sia $f \in \mathscr{R}([a,b])$, allora $\exists \lambda \in [Inff, Supf]$ tale che 
 \[
 \int_{a}^{b}f = \lambda(b-a)\]
@@ -448,7 +460,7 @@ In particolare se $f \in \mathscr{C}([a,b])$, $\exists c \in (a,b)$ tale che
 \[Inff \leq \lambda \leq Supf\]
 Poiché $f \in \mathscr{C}([a,b])$, per il teorema dei valori intermedi, $\exists c: \lambda = f(c)$
 
-\subsection{Primo teorema fondamentale del calcolo integrale}
+\subsection{Primo teorema fondamentale del calcolo integrale (*)}
 Sia $f \in \mathscr{R} ([a,b])$ ed esista primitiva di $f$ su $[a,b]$. Allora 
 \[\int_{a}^{b} f(x) dx = F(b) - F(a)\]
 \textbf{Dimostrazione}
@@ -462,7 +474,7 @@ Ne segue che
 L'identità scritta vale per ogni $n$. Facendolo tendere a $+\infty$ troviamo
 \[\displaystyle F(b) - F(a) = \lim_{n \to +\infty} \sum_{i = 1}^{n} (x_i - x_{i-1})f(\xi_i) = \int_{a}^{b} f(x) dx\]
 
-\subsection{Secondo teorema fondamentale del calcolo integrale}
+\subsection{Secondo teorema fondamentale del calcolo integrale (*)}
 Sia $f \in \mathscr{R}([a,b])$ e sia $F$, definita da 
 \[F(x) = \int_{x_0}^x f(t) dt\]
 , una sua funzione integrale. Allora:
@@ -506,7 +518,7 @@ dico che $f$ è integrabile in senso generalizzato (o improprio) su $(a,b]$ e sc
 \subsubsection{Teorema del confronto}
 Siano $f, g \in \mathscr{R}([a,k]) \hspace*{0.2cm} \forall k>a$ e sia $0 \leq f(x) \leq g(x) \hspace*{0.2cm} \forall x \in [a, +\infty )$. Allora
 \[ \exists \int_a^{+\infty} g(x) dx \Rightarrow \int_a^{+\infty} f(x) dx\]
-\subsubsection{I corollario}
+\subsubsection{I corollario (*)}
 Sia $f(x)$ integrabile in senso generalizzato su $[a, +\infty)$. Se esiste
 \[ \lim_{x\to +\infty} f(x)\]
 allora tale limite è nullo, quindi
@@ -517,7 +529,7 @@ Supponiamo per assurdo che
 \[\exists H : \forall x > H \quad f(x) = \frac{l}{2}\]
 ma $g(x) = \frac{l}{2}$ non è integrabile su $[H, +\infty)$
 
-\subsubsection{II corollario (convergenza assoluta)}
+\subsubsection{II corollario (convergenza assoluta) (*)}
 Se $f \in \mathscr{R}([a,k]), \forall k > a$ ed esiste
 \[ \int_a^{+\infty}|f(x)|dx \]
 allora esiste
@@ -538,7 +550,7 @@ e consideriamo il limite per $t \to +\infty$
 \[ \lim_{t \to +\infty} \int_{a}^{t} f(x) - |f(x)| + |f(x)| dx = \lim_{t \to +\infty} \int_{a}^{t} f(x) + |f(x)| dx - \lim_{t \to +\infty} \int_{a}^{t} |f(x)| dx\]
 I due limiti al secondo membro esistono finiti, per cui esiste anche il limite al primo membro.
 
-\subsubsection{III corollario}
+\subsubsection{III corollario (*)}
 Siano  $f,b : [a, +\infty) \to \mathbb{R}, \quad f,g>0, \quad f,g \in \mathscr{R}([a,k]) \quad \forall k>a$\newline
 Se per $x \to +\infty \quad f(x) \sim g(x)$, allora\newline
 $f$ è integrabile in senso generalizzato $\Leftrightarrow$ lo è $g$, ossia
@@ -555,7 +567,7 @@ per il criterio del confronto, se $g(x)$ converge, anche $\frac{1}{2} g(x)$ conv
 \subsection{Serie convergente, divergente}
 Si dice che $\displaystyle \sum_{n=0}^{+\infty} a_n$ è convergente, divergente, irregolare se la successione $\{ s_n \}$ delle somme parziali (o ridotte), definita da $s_n = \sum_{k=0}^n a_k$, $\forall k = 1, 2 \dots$, è convergente, divergente o irregolare. In particolare, se $\displaystyle \exists \lim_{n \to +\infty} \sum_{k=0}^n a_k = \lim_{n \to +\infty} s_n = s \in \mathbb{R}$, dico che la serie converge e che la somma è $s$.
 
-\subsection{Serie geometrica}
+\subsection{Serie geometrica (*)}
 Sia \(a_n = q^n, q \in \mathbb{R}\). Se \(q \neq 1\), si ha che
 \[ s_n =  \sum_{k=0}^n a^k = 1 + q + q^2 + \dots + q^n = \frac{1-q^{n+1}}{1-q}\]
 Se \(q=1, s_n = n+1\)
@@ -580,7 +592,7 @@ e dimostriamo che sia vero per $n+1$, ossia che
 per l'ipotesi induttiva
 \[ = \frac{1-q^{n+1}}{1-q}+q^{n+1} = \frac{1-q^{n+1}+q^{n+1}-q^{n+2}}{1-q} = \frac{1-q^{n+2}}{1-q}\]
 
-\subsection{Serie di Mengoli}
+\subsection{Serie di Mengoli (*)}
 \[ \sum_{n = 1}^{\infty} \frac{1}{n(n+1)} \quad \text{converge a 1}\]
 \textbf{Dimostrazione}\newline
 Osserviamo che
@@ -589,7 +601,7 @@ per cui
 \[ \sum_{k = 1}^{\infty} \frac{1}{k(k+1)} = \left(1- \frac{1}{2} \right) + \left(\frac{1}{2} - \frac{1}{3} \right) + \dots + \left( \frac{1}{n-1} - \frac{1}{n} \right) + \left( \frac{1}{n} - \frac{1}{n+1} \right) \]
 \[ = 1 - \frac{1}{n+1} \to 1\]
 
-\subsection{Serie armonica}
+\subsection{Serie armonica (*)}
 \[ \sum_{n=1}^{+\infty} \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n} + \dots \to +\infty \]
 
 \textbf{Dimostrazione}\newline
@@ -623,7 +635,7 @@ tale limite sarà finito oppure $+\infty$. Perciò avremo che
 sarà sempre regolare, ossia sarà o convergente o divergente a $+\infty$
 
 \subsection{Criteri di conseguenza}
-\subsubsection{Criterio del confronto}
+\subsubsection{Criterio del confronto (*)}
 Siano \(\{ a_n \}, \{ b_n \}\) due successioni tali che \(0 \leq a_n \leq b_n\). Se \(\displaystyle \sum_{n=0}^{+\infty} b_n\) converge, allora anche \(\displaystyle \sum_{n=0}^{+\infty} a_n\) converge. Se \(\displaystyle \sum_{n=0}^{+\infty} a_n\) diverge, allora diverge anche \(\displaystyle \sum_{n=0}^{+\infty} b_n\)
 \textbf{Dimostrazione}\newline
 Siano \(\displaystyle A_n = \sum_{k=0}^{n} a_k\) e \(\displaystyle B_n = \sum_{k=0}^{n} b_k\) con \( A_n \leq B_n \wedge B_n \to B\)
@@ -637,7 +649,7 @@ cioè
 \]
 per il teorema del confronto per successioni \(A=B\)
 
-\subsubsection{Corollario (confronto asintotico)}
+\subsubsection{Corollario (confronto asintotico) (*)}
 Siano \(\{ a_n \}, \{ b_n \}\) successioni positive, tali che \(a_n \sim b_n\)  per \(n \to +\infty\) allora
 \[
 \sum_{n=0}^{+\infty} a_n \quad \text{converge} \quad \Leftrightarrow \sum_{n=0}^{+\infty} b_n \quad \text{converge}
@@ -668,7 +680,7 @@ l>1 \quad \sum_{n=0}^{+\infty} a_n \quad \text{diverge}\\
 \end{cases}
 \]
 
-\subsubsection{Criterio della radice}
+\subsubsection{Criterio della radice (*)}
 Sia \(\{ a_n \}, a_n \geq 0\). Se esiste
 \[
 \lim_{n \to +\infty} \sqrt[n]{a_n} = \begin{cases}
@@ -714,7 +726,7 @@ l>1 \quad \sum_{n=0}^{+\infty} a_n \quad \text{diverge}
   la serie di partenza diverge
 \end{itemize}
 
-\subsection{Serie a termini di segno qualunque}
+\subsection{Serie a termini di segno qualunque (*)}
 Una serie \(\displaystyle \sum_{n=0}^{+\infty} a_n\) si dirà assolutamente convergente se converge \(\displaystyle \sum_{n=0}^{+\infty} |a_n|\). \newline
 Se la serie \(\displaystyle \sum_{n=0}^{+\infty} a_n\) converge assolutamente, allora converge. \newline
 \textbf{Dimostrazione}
