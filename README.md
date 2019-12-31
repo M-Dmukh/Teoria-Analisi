@@ -5,4 +5,4 @@
 
 * [Scarica](https://github.com/M-Dmukh/Teoria-Analisi/raw/master/Analisi.apkg) il mazzo di flashcard per Anki (per chi non conoscesse Anki, rimando direttamente al [sito](https://apps.ankiweb.net/))
 
-## Sia il pdf, che le flashcard possono presentare errori. Per quanto possibile, cercherò di migliorare, ma ogni contributo sarà gradito.
+## Sia il pdf, che le flashcard possono presentare errori. Per quanto possibile, cercherò di migliorare. Ogni contributo sarà gradito.
