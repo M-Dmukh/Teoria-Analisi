@@ -585,7 +585,7 @@ Per induzione su \(n\). Caso base \(n_0 = 1\)
 \[\sum_{k=0}^1 q^k = 1+q\]
 \[1+q = \frac{1-q^2}{1-q}\]
 Supponiamo che sia vera per $n$
-\[ \sum_{k=0}^n q^k = \frac{1-q^n+1}{1-q}\]
+\[ \sum_{k=0}^n q^k = \frac{1-q^{n+1} }{1-q}\]
 e dimostriamo che sia vero per $n+1$, ossia che
 \[ \sum_{k=0}^{n+1} q^k = \frac{1-q^{n+2}}{1-q} \]
 \[  \sum_{k=0}^{n+1} q^k =  \sum_{k=0}^{n} q^k + q^{n+1}\]
@@ -634,7 +634,7 @@ tale limite sarà finito oppure $+\infty$. Perciò avremo che
 \]
 sarà sempre regolare, ossia sarà o convergente o divergente a $+\infty$
 
-\subsection{Criteri di conseguenza}
+\subsection{Criteri di congruenza}
 \subsubsection{Criterio del confronto (*)}
 Siano \(\{ a_n \}, \{ b_n \}\) due successioni tali che \(0 \leq a_n \leq b_n\). Se \(\displaystyle \sum_{n=0}^{+\infty} b_n\) converge, allora anche \(\displaystyle \sum_{n=0}^{+\infty} a_n\) converge. Se \(\displaystyle \sum_{n=0}^{+\infty} a_n\) diverge, allora diverge anche \(\displaystyle \sum_{n=0}^{+\infty} b_n\)
 \textbf{Dimostrazione}\newline
